@@ -1,0 +1,107 @@
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.content {
+    padding:50px;
+}
+
+/* navagation bar */
+ 
+.navbar {
+    width: 100%;
+    height: 300px;
+    background: url("../images/tail-trails-logo\ .png") center;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Hurricane', cursive;
+    color: white;
+    font-size: 50px;
+    margin: 20px 0 0 50px;
+    
+}
+
+nav a:hover {
+    border-bottom: 1px solid  #fafafa;
+    color: white;
+}
+
+.navbar .company-name {
+    color:black;
+    font-family: 'Hurricane', cursive;
+    font-size: 70px;
+    margin-left: 50px;
+    position: relative;
+    top: 30px;
+    left: 60px;
+} 
+
+/* footer */
+
+.footer {
+    height:300px;
+    width: 100%;
+    background: url("../images/logo-small.png") center;
+}
+
+.footer-links {
+    font-family: 'Hurricane', cursive;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+.footer-contacts {
+    font-family: 'Hurricane', cursive;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    top: 30px;
+    left: 700px;
+}
+
+.footer .company-name {
+    color:black;
+    font-family: 'Hurricane', cursive;
+    font-size: 60px;
+    margin-left: 50px;
+    position: relative;
+    top: 65px;
+    right: 250px;
+}
+/* 
+.footer-socials {
+
+}
+
+ */
+
+/* Book Walk */
+
+#availability-item {
+    background-color: rgb(154, 250, 154);
+    border: solid 2px black;
+    max-width:fit-content;
+    padding: 1rem 4rem 0 4rem;
+    margin: 20px 0 20px 350px;
+    display: inline-block;
+}
+
+#availability-item-btn {
+    background-color: rgb(154, 250, 154);
+    display: inline-block;
+    padding: 1.2rem 2rem ;
+    margin-left: 20px;
+    border: solid 2px black;
+}

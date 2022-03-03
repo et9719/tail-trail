@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+   <h1>Book A Walk With Us!</h1>
+   <p> Here is our current availability, please select a time and date that works for you.</p>
+   <p class="text-danger">Please note that this will send a request to our team, so keep an eye on your booking to make sure it is confirmed!</p>
+   {% for availability in availability_list %}
+      <div id="availability-item">
+         <p>{{ availability.date }} {{ availability.time }}</p>
+      </div>
+      <a href="#"><button id="availability-item-btn">Edit Profile</button></a>
+   {% endfor %}
+   {% if is_paginated %}
+   <nav aria-label="Page navigation">
+       <ul class="pagination justify-content-center">
+           {% if page_obj.has_previous %}
+           <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+           {% endif %}
+           {% if page_obj.has_next %}
+           <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+           {% endif %}
+       </ul>
+   </nav>
+   {% endif %}
+</div>
+{%endblock%}
