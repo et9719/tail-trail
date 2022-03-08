@@ -20,6 +20,18 @@ class ProfileList(generic.ListView):
     paginate_by = 1
 
 
+def profile_list(request):
+    ''' what model we want to see, where we want to see it
+    and the max number of times we want to see it on one page '''
+    profile = Profile.objects.filter(
+        user=request.user.id
+    ).first()
+    context = {
+        "profile": profile if profile else None
+    }
+    return render(request, "my-walks.html", context)
+
+
 class AvailabilityList(generic.ListView):
     ''' what model we want to see, where we want to see it
     and the max number of times we want to see it on one page '''

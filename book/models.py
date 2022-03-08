@@ -2,10 +2,13 @@
 from django.db import models
 # from tailtrail.settings import DATE_INPUT_FORMATS
 from phonenumber_field.modelfields import PhoneNumberField
+from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
     ''' define all infromation needed for users profile '''
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="user")
     owner = models.CharField(max_length=200, unique=True)
     dog = models.CharField(max_length=50)
     address = models.TextField()

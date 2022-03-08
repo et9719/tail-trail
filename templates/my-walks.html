@@ -3,7 +3,6 @@
 {% block content %}
 <div class="content">
    <h1>My Walks</h1>
-   {% for profile in profile_list %}
    <div id="profile-info">
       <h2>My Profile Information</h2>
       <p class="owner">Owner Name: {{ profile.owner }}</p>
@@ -13,7 +12,6 @@
       <p class="info">Extra Information: {{ profile.info }}</p>
       <a href="#"><button>Edit Profile</button></a>
    </div>
-   {% endfor %}
    <div id="current-bookings">
       <h2>Current Bookings</h2>
       <div my-bookings>
