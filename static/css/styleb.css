@@ -3,6 +3,10 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 p {
     font-size: 20px;
     text-align: center;
@@ -87,14 +91,73 @@ nav a:hover {
 
  */
 
+ /* Home */
+
+.home-content h1 {
+    font-size: 40px;
+    text-align: left;
+}
+
+p {
+    font-size: x-large;
+    text-align: left;
+}
+
+.home-content h2 {
+    text-align: left;
+}
+
+#description {
+    padding: 20px 0;
+}
+
+#contacts {
+    padding-top: 20px;
+}
+
+/* My Walks */
+
+#profile-info {
+    width: 50%;
+    display: inline-block;
+    font-size: 20px;
+    padding: 25px;
+    margin: 25px;
+    border: solid 2px black;
+}
+
+.profile-info h2 {
+    text-align: left;
+    padding: 2% 0;
+}
+
+.profile-info p {
+    text-align: left;
+    padding: 2% 0;
+}
+
+#current-bookings {
+    display: inline-block;
+    position: relative;
+    bottom: 150px;
+    font-size: 20px;
+    padding: 25px;
+    margin: 25px;
+    background: red;
+}
+
 /* Book Walk */
+
+.make-booking-content p {
+    text-align: center;
+}
 
 #availability-item {
     background-color: rgb(154, 250, 154);
     border: solid 2px black;
-    max-width:fit-content;
+    width: 400px;
     padding: 1rem 4rem 0 4rem;
-    margin: 20px 0 20px 350px;
+    margin: 20px 0 20px 300px;
     display: inline-block;
 }
 

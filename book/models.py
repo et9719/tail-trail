@@ -1,6 +1,16 @@
 ''' Imports '''
 from django.db import models
 # from tailtrail.settings import DATE_INPUT_FORMATS
+from phonenumber_field.modelfields import PhoneNumberField
+
+
+class Profile(models.Model):
+    ''' define all infromation needed for users profile '''
+    owner = models.CharField(max_length=200, unique=True)
+    dog = models.CharField(max_length=50)
+    address = models.TextField()
+    phonenumber = PhoneNumberField(blank=True)
+    info = models.TextField()
 
 
 class Availability(models.Model):
@@ -15,12 +25,5 @@ class Availability(models.Model):
         ''' Show availability in a list orded by date '''
         ordering = ['date']
 
-    # input_formats = {
-    #     'date': DATE_INPUT_FORMATS,
-    # }
-
     def __str__(self):
         return f"{self.date} {self.time}"
-
-
-# Create Profile model
