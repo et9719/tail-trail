@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<div class="container signup-container">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h1>{% trans "Sign Up" %}</h1>
+
+      <p>{% blocktrans %}Welcome to Tail Trail. To make a booking with us, first we need
+         a little info to help us get to know you and your dog! Please fill out the form below or 
+         if you already have an account then please <a class="link"
+          href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        <label for="ownername">Owners Name:</label>
+        <input class="input-txt" type="text" id="ownername" name="ownername"  placeholder="Owners Name"><br><br>
+        <label for="dogname">Dogs Name:</label>
+        <input class="input-txt" type="text" id="dogname" name="dogname"  placeholder="Dogs Name"><br><br>
+        <label for="address">Pick Up/ Drop Off Address:</label>
+        <input class="input-txt" type="text" id="address" name="address" placeholder="Address"><br><br>
+        <!-- 
+        <input class="input-txt" type="text" id="info" name="info"  placeholder="Extra Info"><br><br> -->
+        <label for="info">Any Extra Info We Might Need To Know About Your Dog:</label>
+        <textarea class="input-txt" id="info" name="info" rows="4" cols="50" placeholder="Please type any relevent information here.">
+        </textarea><br><br>
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn" id="btn-signup" type="submit">{% trans "Sign Up" %} &raquo;</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

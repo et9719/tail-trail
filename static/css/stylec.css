@@ -29,7 +29,7 @@ nav a {
     font-family: 'Hurricane', cursive;
     color: white;
     font-size: 50px;
-    margin: 20px 0 0 50px;
+    margin: 20px 0 0 40px;
     
 }
 
@@ -167,4 +167,83 @@ p {
     padding: 1.2rem 2rem ;
     margin-left: 20px;
     border: solid 2px black;
+}
+
+/* login */
+
+.login-container h1 {
+    padding: 5%;
+}
+
+#btn-signin {
+    background-color: #8e909a;
+    color: #fff;
+    margin-bottom: 5%;
+    padding: 1% 8%;
+    font-size: 20px;
+}
+
+#btn-signin:hover,
+#btn-signin:active {
+    background-color: #fff;
+    color: #8e909a;
+}
+
+/* sign up */
+
+.signup-container h1 {
+    padding: 5%;
+}
+
+.signup-container label {
+    font-size: x-large;
+}
+
+/* #info {
+    width: 500px;
+    height: 200px;
+} */
+
+.input-txt {
+    font-size: x-large;
+}
+
+#btn-signup {
+    background-color: #8e909a;
+    color: #fff;
+    margin-bottom: 5%;
+    padding: 1% 8%;
+    font-size: 20px;
+}
+
+#btn-signup:hover,
+#btn-signup:active {
+    background-color: #fff;
+    color: #8e909a;
+}
+
+/* signout */
+
+.signout-container h1 {
+    padding: 5%;
+}
+
+.signout-container p {
+    text-align: center;
+}
+
+#btn-signout {
+    background-color: #8e909a;
+    color: #fff;
+    margin-bottom: 5%;
+    padding: 1% 8%;
+    font-size: 20px;
+    position:relative;
+    left: 37%;
+}
+
+#btn-signout:hover,
+#btn-signout:active {
+    background-color: #fff;
+    color: #8e909a;
 }
