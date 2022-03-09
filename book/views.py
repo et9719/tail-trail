@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Availability, Profile
+from .forms import ProfileForm
 
 
 class Home(generic.ListView):
@@ -30,15 +31,17 @@ def profile_list(request):
     }
     return render(request, "my-walks.html", context)
 
+
 def edit_profile_list(request):
     ''' what model we want to see, where we want to see it '''
-    profile = Profile.objects.filter(
-        user=request.user.id
-    ).first()
-    context = {
-        "profile": profile if profile else None
-    }
-    return render(request, "edit-profile.html", context)
+    return render(
+        request,
+        "edit-profile.html",
+        {
+            "profile_form": ProfileForm()
+        },
+    )
+
 
 class AvailabilityList(generic.ListView):
     ''' what model we want to see, where we want to see it

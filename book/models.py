@@ -8,8 +8,8 @@ from django.contrib.auth.models import User
 class Profile(models.Model):
     ''' define all infromation needed for users profile '''
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="user")
-    owner = models.CharField(max_length=200, unique=True)
+        User, on_delete=models.CASCADE, related_name="user", unique=True)
+    owner = models.CharField(max_length=200)
     dog = models.CharField(max_length=50)
     address = models.TextField()
     phonenumber = PhoneNumberField(blank=True)

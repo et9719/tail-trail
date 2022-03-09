@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="content edit-profile-content">
+
+{% load crispy_forms_tags %}
+<div class="content">
+    <h1>Edit Profile</h1>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form method="post" style="margin-top: 1.3em;">
+                {{ profile_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- <div class="content edit-profile-content">
     <h1>Edit Profile</h1>
     <div id="profile-information">
         <p class="owner">Owner Name: {{ profile.owner }}</p>
@@ -11,5 +25,5 @@
         <p class="info">Extra Information: {{ profile.info }}</p>
         <a href="#"><button>Submit</button></a>
     </div>
-</div>
+</div> -->
 {%endblock%}
