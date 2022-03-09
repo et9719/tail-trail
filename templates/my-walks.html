@@ -11,8 +11,7 @@
          <p class="address">Pick Up/Drop Off Address: {{ profile.address }}</p>
          <p class="number">Phone Number: {{ profile.phonenumber }}</p>
          <p class="info">Extra Information: {{ profile.info }}</p>
-         <!-- <a href="#"><button>Edit Profile</button></a> -->
-         <a class="nav-link"  href="/edit-profile">Edit Profile</a>
+         <button class="btn" id="btn-edit" onclick="location.href='/edit-profile'" type="submit">Edit Profile</button>
       </div>
       <div id="current-bookings">
          <h2>Current Bookings</h2>

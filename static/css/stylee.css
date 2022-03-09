@@ -173,6 +173,20 @@ p {
     color: #8e909a;
 }
 
+#btn-edit {
+    background-color: #8e909a;
+    color: #fff;
+    margin: 5% 0;
+    padding: 1% 8%;
+    font-size: 20px;
+}
+
+#btn-edit:hover,
+#btn-edit:active {
+    background-color: #fff;
+    color: #8e909a;
+}
+
 /* Book Walk */
 
 .make-booking-content p {
