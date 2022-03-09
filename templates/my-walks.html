@@ -1,24 +1,37 @@
 {% extends "base.html" %}
 
+<!-- {% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %} -->
+
 {% block content %}
 <div class="content">
    <h1>My Walks</h1>
-   <div id="profile-info">
-      <h2>My Profile Information</h2>
-      <p class="owner">Owner Name: {{ profile.owner }}</p>
-      <p class="dog">Dog Name: {{ profile.dog }}</p>
-      <p class="address">Pick Up/Drop Off Address: {{ profile.address }}</p>
-      <p class="number">Phone Number: {{ profile.phonenumber }}</p>
-      <p class="info">Extra Information: {{ profile.info }}</p>
-      <a href="#"><button>Edit Profile</button></a>
-   </div>
-   <div id="current-bookings">
-      <h2>Current Bookings</h2>
-      <div my-bookings>
-         <p>tesing</p>
-         <p>test</p>
-         <p>testing</p>
+   {% if user.is_authenticated %}
+      <div id="profile-info">
+         <h2>My Profile Information</h2>
+         <p class="owner">Owner Name: {{ profile.owner }}</p>
+         <p class="dog">Dog Name: {{ profile.dog }}</p>
+         <p class="address">Pick Up/Drop Off Address: {{ profile.address }}</p>
+         <p class="number">Phone Number: {{ profile.phonenumber }}</p>
+         <p class="info">Extra Information: {{ profile.info }}</p>
+         <a href="#"><button>Edit Profile</button></a>
       </div>
-   </div>
+      <div id="current-bookings">
+         <h2>Current Bookings</h2>
+         <div my-bookings>
+            <p>tesing</p>
+            <p>test</p>
+            <p>testing</p>
+         </div>
+      </div>
+   {% else %}
+      <div id="not-login">
+         <p> To view your profile and current bookings please 
+         <button class="btn" id="btn-login" onclick="location.href='{% url 'account_login' %}'" type="submit">Login</button>
+         </p>
+      </div>
+   {% endif %}
 </div>
 {%endblock%}

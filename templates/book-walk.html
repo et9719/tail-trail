@@ -3,25 +3,44 @@
 {% block content %}
 <div class="content make-booking-content">
    <h1>Book A Walk With Us!</h1>
-   <p> Here is our current availability, please select a time and date that works for you.</p>
-   <p class="text-danger">Please note that this will send a request to our team, so keep an eye on your booking to make sure it is confirmed!</p>
-   {% for availability in availability_list %}
-      <div id="availability-item">
-         <p>{{ availability.date }} {{ availability.time }}</p>
+   {% if user.is_authenticated %}
+      <p> Here is our current availability, please select a time and date that works for you.</p>
+      <p class="text-danger">Please note that this will send a request to our team, so keep an eye on your booking to make sure it is confirmed!</p>
+      <div class="row">
+         <div class="col-md-10">
+         {% for availability in availability_list %}
+            <div id="availability-item">
+               <p>{{ availability.date }} {{ availability.time }}</p>
+            </div>
+            <button class="btn" id="btn-request" onclick="#" type="submit">Request</button>
+         {% endfor %}
+         </div>
       </div>
-      <a href="#"><button id="availability-item-btn">Request</button></a>
-   {% endfor %}
+   {% else %}
+      <p> Here is our current availability. To book a time and date that works for you please <a class="link"
+      href="{% url 'account_login' %}">sign in</a></p>
+      <p class="text-danger">Please note that this will send a request to our team, so keep an eye on your booking to make sure it is confirmed!</p>
+      <div class="row">
+         <div class="col-md-8 offset-md-1">
+            {% for availability in availability_list %}
+            <div id="availability-item">
+               <p>{{ availability.date }} {{ availability.time }}</p>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   {% endif %}
    {% if is_paginated %}
-   <nav aria-label="Page navigation">
-       <ul class="pagination justify-content-center">
-           {% if page_obj.has_previous %}
-           <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-           {% endif %}
-           {% if page_obj.has_next %}
-           <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-           {% endif %}
-       </ul>
-   </nav>
+      <nav aria-label="Page navigation">
+         <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+         </ul>
+      </nav>
    {% endif %}
 </div>
 {%endblock%}

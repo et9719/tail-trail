@@ -84,6 +84,10 @@ nav a:hover {
     top: 65px;
     right: 250px;
 }
+
+.footer-links a {
+    color: black;
+}
 /* 
 .footer-socials {
 
@@ -146,6 +150,29 @@ p {
     background: red;
 }
 
+#not-login p {
+    text-align: center;
+    padding-top: 25px;
+}
+
+#not-login a {
+    color:white;
+}
+
+#btn-login {
+    background-color: #8e909a;
+    color: #fff;
+    margin-left: 2%; 
+    padding: 1% 5%; 
+    font-size: 20px;
+}
+
+#btn-login:hover,
+#btn-login:active {
+    background-color: #fff;
+    color: #8e909a;
+}
+
 /* Book Walk */
 
 .make-booking-content p {
@@ -155,18 +182,27 @@ p {
 #availability-item {
     background-color: rgb(154, 250, 154);
     border: solid 2px black;
+    border-radius: 0.25rem;
     width: 400px;
     padding: 1rem 4rem 0 4rem;
     margin: 20px 0 20px 300px;
     display: inline-block;
 }
 
-#availability-item-btn {
+#btn-request {
     background-color: rgb(154, 250, 154);
-    display: inline-block;
-    padding: 1.2rem 2rem ;
-    margin-left: 20px;
-    border: solid 2px black;
+    color: black;
+    margin-left: 2%; 
+    padding: 1.15rem 4rem;
+    font-size: 20px;
+    border: solid black 2px;
+    position:relative;
+    bottom: 5px;
+}
+
+#btn-request:hover,
+#btn-request:active {
+    border: solid black 3px;
 }
 
 /* login */

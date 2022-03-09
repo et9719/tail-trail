@@ -21,8 +21,7 @@ class ProfileList(generic.ListView):
 
 
 def profile_list(request):
-    ''' what model we want to see, where we want to see it
-    and the max number of times we want to see it on one page '''
+    ''' what model we want to see, where we want to see it '''
     profile = Profile.objects.filter(
         user=request.user.id
     ).first()
