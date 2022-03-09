@@ -1,10 +1,5 @@
 {% extends "base.html" %}
 
-<!-- {% load i18n %}
-{% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %} -->
-
 {% block content %}
 <div class="content">
    <h1>My Walks</h1>
@@ -16,7 +11,8 @@
          <p class="address">Pick Up/Drop Off Address: {{ profile.address }}</p>
          <p class="number">Phone Number: {{ profile.phonenumber }}</p>
          <p class="info">Extra Information: {{ profile.info }}</p>
-         <a href="#"><button>Edit Profile</button></a>
+         <!-- <a href="#"><button>Edit Profile</button></a> -->
+         <a class="nav-link"  href="/edit-profile">Edit Profile</a>
       </div>
       <div id="current-bookings">
          <h2>Current Bookings</h2>

@@ -30,6 +30,15 @@ def profile_list(request):
     }
     return render(request, "my-walks.html", context)
 
+def edit_profile_list(request):
+    ''' what model we want to see, where we want to see it '''
+    profile = Profile.objects.filter(
+        user=request.user.id
+    ).first()
+    context = {
+        "profile": profile if profile else None
+    }
+    return render(request, "edit-profile.html", context)
 
 class AvailabilityList(generic.ListView):
     ''' what model we want to see, where we want to see it
