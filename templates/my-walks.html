@@ -12,9 +12,11 @@
          <p class="number">Phone Number: {{ profile.phonenumber }}</p>
          <p class="info">Extra Information: {{ profile.info }}</p>
          {% if profile != None %}
-            <button class="btn" id="btn-edit" onclick="location.href='/edit-profile'" type="submit">Edit Profile</button>
+            <!-- <button class="btn"  onclick="location.href='/profile_update_form.html'" type="submit">Edit Profile</button> -->
+            <a class="btn" id="btn-edit" href="/profile-update">Edit Profile</a>
          {% else %}
-            <button class="btn" id="btn-edit" onclick="location.href='/profile_create_form.html'" type="submit">Create Profile</button>
+            <!-- <button class="btn" id="btn-edit" onclick="location.href='/profile_create_form.html'" type="submit">Create Profile</button> -->
+            <a class="btn" id="btn-edit" href="/profile-create">Create Profile</a>
          {% endif %}
       </div>
       <div id="current-bookings">

@@ -1,6 +1,5 @@
 ''' Imports '''
 from django.db import models
-# from tailtrail.settings import DATE_INPUT_FORMATS
 from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import User
 

@@ -4,10 +4,10 @@
 
 {% load crispy_forms_tags %}
 <div class="content">
-    <h1>Create Profile</h1>
+    <h1>Update Profile</h1>
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <form method="POST" action="/profile-create/">{% csrf_token %}
+            <form method="POST" action="/profile-update/">{% csrf_token %}
                 <label for="owner">Owner:</label>
                 <input name="owner" type="text" placeholder="Owner"><br>
                 <label for="dog">Dog:</label>

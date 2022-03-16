@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'css/stylee.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <script src="https://kit.fontawesome.com/b62f6e01c.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,17 +44,14 @@
                         </li>
                         {% endif %}
                     </ul>
-                </div>
                 <p class="company-name">Tail Trails</p>
             </div>
         </nav>
-
         <main class="flex-shrink-0 main-bg">
             {% block content %}
             <!-- Content Goes here -->
             {% endblock content %}
         </main>
-
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-links">
